@@ -17,9 +17,9 @@ public class Empty : Stuff
         return "Empty";
     }
 
-    public override Stuff HardCopy()
+    public override Sprite GetSprite()
     {
-        return new Empty();
+        throw new NotImplementedException();
     }
 
     public override void Use()
