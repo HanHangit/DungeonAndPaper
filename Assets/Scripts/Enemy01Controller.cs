@@ -6,12 +6,12 @@ public class Enemy01Controller : MonoBehaviour
 
     Rigidbody2D Rb2d;
     Vector2 PlayerPosition;
-    EnemyAttributes EnemyAtr;
+    EnemyAttributes EnemyAttr;
     float Speed;
     // Use this for initialization
     void Start()
     {
-        EnemyAtr = GetComponent<EnemyAttributes>();
+        EnemyAttr = GetComponent<EnemyAttributes>();
         Rb2d = GetComponent<Rigidbody2D>();
 
 
@@ -20,7 +20,7 @@ public class Enemy01Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Speed = EnemyAtr.GetSpeed();
+        Speed = EnemyAttr.GetSpeed();
         PlayerPosition = new Vector2(GameObject.FindGameObjectWithTag("Player").transform.position.x, GameObject.FindGameObjectWithTag("Player").transform.position.y);
         
     }

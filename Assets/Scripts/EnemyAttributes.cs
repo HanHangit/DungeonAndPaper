@@ -4,6 +4,14 @@ using System.Collections;
 public class EnemyAttributes : MonoBehaviour {
     public float HitPoints;
     public float Speed;
+    public float CollisionDamage;
+    public float BulletDamage;
+    public bool isRanged;
+
+    void Start()
+    {
+        GetComponent<CollisionWithPlayer>().SetDamage(CollisionDamage);
+    }
 
     public float GetSpeed()
     {
