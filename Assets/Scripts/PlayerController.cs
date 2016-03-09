@@ -4,18 +4,21 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     Rigidbody2D Rb2d;
-    public float Speed;
     Vector2 MoveDirection;
+    PlayerAttributes PlayerAtt;
+    float Speed;
 
 	// Use this for initialization
 	void Start () {
 
         Rb2d = GetComponent<Rigidbody2D>();
-
+        PlayerAtt = GetComponent<PlayerAttributes>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        Speed = PlayerAtt.GetSpeed();
 
         MoveDirection = Vector2.zero;
 

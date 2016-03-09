@@ -27,6 +27,5 @@ public class Enemy01Controller : MonoBehaviour
     void FixedUpdate()
     {
         Rb2d.velocity = (PlayerPosition - new Vector2(transform.position.x, transform.position.y)).normalized * Speed;
-
     }
 }
